@@ -11,9 +11,12 @@ This only concerns the Android version of the SDK and therefore will only work o
 
 First you need to install the plugin:
 
-`cordova plugins add https://github.com/WonkyStar/infantium-phonegap`
+`cordova plugins add com.wonkystar.phonegap.infantium` to get the latest published version.  
 
-This will add all the necessary libs to your Android app (Infantium SDK etc.). It will also add Infantium's required permissions to your Android Manifest.
+`cordova plugins add https://github.com/WonkyStar/infantium-phonegap.git` if you want the latest version on Github.
+
+
+This will add all the necessary libs to your Android app (Infantium SDK etc.). It will also add Infantium's required permissions and receiver to your Android Manifest.
 
 Now your will have access to Infantium's SDK in `window.plugins.infantium`.  
 You will find the functions' signatures in `www/infantium.js`.
