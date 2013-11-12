@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.wonkystar.phonegap.infantium"
+        version="0.1.0">
+
+    <name>Infantium</name>
+    <description>Infantium SDK Plugin for Phonegap</description>
+    <license>MIT</license>
+    <keywords>cordova,infantium,phonegap</keywords>
+    <repo>https://github.com/WonkyStar/infantium-phonegap.git</repo>
+    <issue>https://github.com/WonkyStar/infantium-phonegap/issues</issue>
+
+    <js-module src="www/infantium.js" name="infantium">
+        <merges target="plugins.infantium" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Infantium">
+                <param name="android-package" value="com.wonkystar.phonegap.infantium.Infantium"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Infantium.java" target-dir="src/com/wonkystar/phonegap/infantium" />
+        <source-file src="src/android/InfantiumResponseHandler.java" target-dir="src/com/wonkystar/phonegap/infantium" />
+        <source-file src="src/android/InfantiumSDK.jar" target-dir="libs" />        
+        <source-file src="src/android/android-async-http-1.4.3.jar" target-dir="libs" />
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+            <receiver android:name="ReceivePlayer">
+                <intent-filter>
+                    <action android:name="com.infantium.android.sdk.ReceivePlayer"></action>
+                </intent-filter>
+            </receiver>
+        </config-file>
+     </platform>
+</plugin>
