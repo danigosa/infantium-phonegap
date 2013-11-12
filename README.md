@@ -5,7 +5,8 @@ infantium-phonegap
 
 # Warning
 
-This only concerns the Android version of the SDK and therefore will only work on Android versions of your Phonegap apps.
+This only concerns the Android version of the SDK and therefore will only work on Android versions of your Phonegap apps.  
+Also, this is the debug version of the Infantium SDK that you should use for development. You will need to switch to the production version later by just replacing the jar file in the libs folder of the Android project.
 
 # How to
 
