@@ -1,7 +1,7 @@
 infantium-phonegap-android
 ==================
 
-## Phonegap Plugin for the Infantium SDK
+## Phonegap Plugin for the Infantium Android SDK
 
 # Warning
 
