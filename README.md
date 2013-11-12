@@ -1,4 +1,4 @@
-infantium-phonegap
+infantium-phonegap-android
 ==================
 
 ## Phonegap Plugin for the Infantium SDK
